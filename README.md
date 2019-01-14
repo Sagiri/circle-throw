@@ -8,9 +8,9 @@ Implementation of Circle Throw (and Dragon Tail)'s effect in FR.
 
 Open `circle-throw.asm`.
 
-Update `free` to where you want the code to be inserted. 80 bytes of free space are required, and it should start from a word-aligned offset.
+Update `free` to where you want the code to be inserted. `80` bytes of free space are required, and it should start from a word-aligned offset.
 
-Update `move_scripts` if the location of that table in your ROM doesn't match MrDS's patch. Update `EFFECT_CIRCLE_THROW` to whatever effect number you want to give Circle Throw and Dragon Tail.
+Update `EFFECT_CIRCLE_THROW` to whatever effect number you want to give Circle Throw and Dragon Tail.
 
 Put your ROM in the project root directory, name it `rom.gba`, and run `armips circle-throw.asm`. The output will be in `test.gba`.
 
