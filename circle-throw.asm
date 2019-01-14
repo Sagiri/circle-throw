@@ -16,8 +16,7 @@ MOVE_RESULT_NO_EFFECT equ 0x29
 
 .include "battlescript.s"
 
-.create "test.gba", 0x08000000
-.import "rom.gba"
+.open "rom.gba", "test.gba", 0x08000000
 
 .org free
 
