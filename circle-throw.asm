@@ -1,11 +1,11 @@
 .definelabel free, 0x08800000
 
+.definelabel move_scripts, 0x08903B70           // mrds
 EFFECT_CIRCLE_THROW equ 231
 
 // -----------------------------------------------------------------------------
 
 .definelabel b_attack_effectivity, 0x02023DCC
-.definelabel move_scripts_ptr, 0x08025CF8
 
 CMP_COMMON_BITS equ 0x4
 MOVE_RESULT_NO_EFFECT equ 0x29
@@ -24,7 +24,7 @@ MOVE_RESULT_NO_EFFECT equ 0x29
     .include "script.asm"
 .endarea
 
-.org readu32("rom.gba", move_scripts_ptr & 0x1FFFFFF) + (EFFECT_CIRCLE_THROW) *4
+.org move_scripts + (EFFECT_CIRCLE_THROW) *4
 .word circle_throw_move_script
 
 .close
